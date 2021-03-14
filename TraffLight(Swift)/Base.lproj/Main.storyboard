@@ -26,16 +26,19 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="executeChanging" destination="BYZ-38-t0r" eventType="touchUpInside" id="ero-gH-uFz"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1e-9i-t4b">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1e-9i-t4b">
                                 <rect key="frame" x="123" y="63" width="129" height="128"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78Y-d2-7SM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78Y-d2-7SM">
                                 <rect key="frame" x="123" y="375" width="129" height="128"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-kf-Zae">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-kf-Zae">
                                 <rect key="frame" x="123" y="218" width="129" height="128"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
@@ -44,23 +47,33 @@
                         <color key="backgroundColor" red="0.85380131006240845" green="0.95950442552566528" blue="0.86522883176803589" alpha="0.9998779296875" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="U1e-9i-t4b" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3QX-O1-aG2"/>
+                            <constraint firstItem="xpG-WT-goj" firstAttribute="top" secondItem="78Y-d2-7SM" secondAttribute="bottom" constant="38" id="67S-rZ-14M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="78Y-d2-7SM" secondAttribute="trailing" constant="123" id="86h-t9-DeB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XtS-kf-Zae" secondAttribute="trailing" constant="123" id="8ah-jX-bL6"/>
+                            <constraint firstItem="78Y-d2-7SM" firstAttribute="top" secondItem="XtS-kf-Zae" secondAttribute="bottom" constant="29" id="8cB-o1-fPs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xpG-WT-goj" secondAttribute="trailing" constant="100" id="AG0-0Y-k6C"/>
                             <constraint firstItem="XtS-kf-Zae" firstAttribute="top" secondItem="U1e-9i-t4b" secondAttribute="bottom" constant="27" id="C4H-KU-kZF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U1e-9i-t4b" secondAttribute="trailing" constant="123" id="DjB-oa-0Lg"/>
                             <constraint firstItem="78Y-d2-7SM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FeZ-lf-G6h"/>
+                            <constraint firstItem="78Y-d2-7SM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="375" id="LSc-b6-226"/>
                             <constraint firstItem="xpG-WT-goj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ObB-fF-3CC"/>
                             <constraint firstItem="XtS-kf-Zae" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rtl-CN-Xml"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xpG-WT-goj" secondAttribute="bottom" constant="98" id="UGF-oz-JdW"/>
+                            <constraint firstItem="U1e-9i-t4b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="Tz8-mh-IGw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xpG-WT-goj" secondAttribute="bottom" constant="80" id="USz-AT-8rQ"/>
                             <constraint firstItem="XtS-kf-Zae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="aWh-Om-Z63"/>
                             <constraint firstItem="78Y-d2-7SM" firstAttribute="top" secondItem="XtS-kf-Zae" secondAttribute="bottom" constant="29" id="cck-Qa-32h"/>
                             <constraint firstItem="xpG-WT-goj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="da6-EE-enB"/>
                             <constraint firstItem="78Y-d2-7SM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="gde-EX-Lqr"/>
                             <constraint firstItem="U1e-9i-t4b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="ylc-kA-WqW"/>
+                            <constraint firstItem="XtS-kf-Zae" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="218" id="zp4-Y6-vlv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenColor" destination="78Y-d2-7SM" id="nk6-2q-ZbN"/>
+                        <outlet property="redColor" destination="U1e-9i-t4b" id="gMh-na-avR"/>
+                        <outlet property="startButton" destination="xpG-WT-goj" id="q0Y-zT-HZ4"/>
+                        <outlet property="yellowColor" destination="XtS-kf-Zae" id="CcE-eq-4q5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

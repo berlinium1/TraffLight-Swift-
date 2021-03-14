@@ -8,20 +8,43 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var redColor: UIView!
+    @IBOutlet var yellowColor: UIView!
+    @IBOutlet var greenColor: UIView!
     @IBOutlet var startButton: UIButton!
-    @IBOutlet var redLight: UIView!
-    @IBOutlet var yellowLight: UIView!
-    @IBOutlet var greenLight: UIView!
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        redColor.alpha = 0.1
+        yellowColor.alpha = 0.1
+        greenColor.alpha = 0.1
+        redColor.layer.cornerRadius = 30
+        yellowColor.layer.cornerRadius = 30
+        greenColor.layer.cornerRadius = 30
     }
 
-    @IBAction func changeColor() {
-    }
-    
+    @IBAction func executeChanging() {
+        if (redColor.alpha != 1) && (yellowColor.alpha != 1) && (greenColor.alpha != 1) {
+            redColor.alpha = 1
+            startButton.setTitle("NEXT", for: .normal)
+        }
+        else if (redColor.alpha == 1) && (yellowColor.alpha != 1) && (greenColor.alpha != 1) {
+            redColor.alpha = 0.1
+            yellowColor.alpha = 1
+            startButton.setTitle("NEXT", for: .normal)
+        }
+        else if (redColor.alpha != 1) && (yellowColor.alpha == 1) && (greenColor.alpha != 1) {
+            yellowColor.alpha = 0.1
+            greenColor.alpha = 1
+            startButton.setTitle("NEXT", for: .normal)
+        }
+        else if (redColor.alpha != 1) && (yellowColor.alpha != 1) && (greenColor.alpha == 1) {
+            redColor.alpha = 1
+            greenColor.alpha = 0.1
+            startButton.setTitle("NEXT", for: .normal)
+        }
+    }   
 }
 
